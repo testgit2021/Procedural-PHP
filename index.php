@@ -1,10 +1,9 @@
 <?php
 include 'header.php';
+
 ?>
 
 <!-- Main content -->
-
-<div class="container-lg">
     <div class="row g-2">
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
             <div class="card h-100">
@@ -164,7 +163,6 @@ include 'header.php';
     </li>
   </ul>
 </nav>
-</div>
 <?php
 include 'footer.php';
 ?>

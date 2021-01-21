@@ -42,9 +42,17 @@ session_start();
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        <?php 
+        if(isset($_GET['login'])){
+          if($_GET['login'] == 'success'){
+            echo "<span class='text-control text-danger p-1'>Wellcome, ". $_SESSION["user"] ."!</span>";
+        }
+    }
+    ?>
       </form>
     </div>
   </div>
 </nav>
+<div class="container-lg mt-2">
