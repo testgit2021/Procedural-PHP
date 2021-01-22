@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
         $sql = "SELECT * FROM users WHERE UserName='$userName';";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
-            if(passwordsDontMatch($pwd, $row['UserPwd'])){
+        if(passwordsDontMatch($pwd, $row['UserPwd'])){
                 header("Location: ../login.php?login=passincorrect");
                 exit();
         }else{

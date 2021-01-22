@@ -8,7 +8,14 @@ if(isset($_POST['submit'])){
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
     $checkPwd = mysqli_real_escape_string($conn, $_POST['pwdcheck']);
+    $pwdHash = password_hash($pwd, PASSWORD_DEFAULT);
     if(emptyInput($firstName, $lastName, $userName, $email, $pwd) !== false){
+        $firstName = $_POST['firstname'];
+        $lastName = $_POST['lastname'];
+        $userName = $_POST['uid'];
+        $email = $_POST['email'];
+
+
         header("Location: ../signup.php?signup=empty");
         exit(); 
     }
@@ -16,7 +23,7 @@ if(isset($_POST['submit'])){
         header("Location: ../signup.php?signup=userexists");
         exit();
     }
-    elseif(passwordsDontMatch($pwd, $checkPwd)){
+    elseif(passwordsDontMatch($pwd, $pwdHash)){
         header("Location: ../signup.php?signup=passswordsdontmatch");
         exit();
     }
@@ -24,7 +31,7 @@ if(isset($_POST['submit'])){
         $pwdHash = password_hash($pwd, PASSWORD_DEFAULT);
         $sql = "INSERT INTO users (FirstName, LastName, UserName, Email, UserPwd) VALUES ('$firstName', '$lastName', '$userName', '$email', '$pwdHash');";
         mysqli_query($conn, $sql);
-        header("Location: ../login.php?signup=succes");
+        header("Location: ../login.php?login=succes");
         exit();
     }
 }else{

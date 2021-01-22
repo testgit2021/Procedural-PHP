@@ -14,21 +14,24 @@ session_start();
 <body>
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
   <div class="container-lg">
-    <a class="navbar-brand" href="index.php">Navbar</a>
+  <?php
+  if(isset($_SESSION["user"])){
+      echo '<a class="navbar-brand" href="index.php"><img src="images/logo_'.$_SESSION['user'].'.png" alt="site-logo"></a>';
+    }
+    else{
+      echo '<a class="navbar-brand" href="index.php"><img src="images/perm_identity-24px.svg" alt="site-logo"></a>';
+    }?>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
+          <a class="nav-link" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Our store
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -37,22 +40,45 @@ session_start();
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+        <?php
+            if(isset($_SESSION["user"])){
+                echo '<li class="nav-item">';
+                  echo '<a class="nav-link" href="logout.php">Log Out</a>';
+                echo '</li>';
+            }
+            else{
+              echo '<li class="nav-item">';
+                echo '<a class="nav-link" href="login.php">Login</a>';
+              echo '</li>';
+            }?>
+        <?php
+            if(isset($_SESSION["user"])){
+                echo '<li class="nav-item">';
+                  echo '<a class="nav-link" href="myaccount.php">My account</a>';
+                echo '</li>';
+            }
+            else{
+              echo '<li class="nav-item">';
+                echo '<a class="nav-link" aria-current="page" href="signup.php">Signup</a>';
+            echo '</li>';
+            }?> 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="signup.php">Signup</a>
-        </li>
+          <a class="nav-link" aria-current="page" href="contact.php">Contact Us</a>
+        </li>       
       </ul>
       <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         <?php 
-        if(isset($_GET['login'])){
-          if($_GET['login'] == 'success'){
-            echo "<span class='text-control text-danger p-1'>Wellcome, ". $_SESSION["user"] ."!</span>";
-        }
-    }
+            if(isset($_SESSION["user"])){
+              echo "<span class='text-control text-danger p-1'>Wellcome, ". $_SESSION["user"] ."!</span>";
+            }elseif(isset($_GET["logout"])){
+              if($_GET['logout'] == 'success'){
+                echo "<span class='text-control text-success p-1'>Logged out!</span>";
+            }}
     ?>
       </form>
     </div>
   </div>
 </nav>
-<div class="container-lg mt-2">
+<div class="container-lg mt-2 pb-5">

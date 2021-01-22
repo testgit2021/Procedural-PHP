@@ -1,12 +1,11 @@
 <?php
 include 'header.php';
-
 ?>
 
 <!-- Main content -->
     <div class="row g-2">
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -18,7 +17,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -30,7 +29,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -42,7 +41,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -54,7 +53,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -66,7 +65,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -78,7 +77,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -90,7 +89,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -102,7 +101,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -114,7 +113,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -126,7 +125,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -138,7 +137,7 @@ include 'header.php';
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2">
-            <div class="card h-100">
+            <div class="card h-100 shadow rounded">
             <img src="images/default-img.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>

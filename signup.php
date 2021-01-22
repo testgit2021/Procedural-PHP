@@ -1,10 +1,10 @@
 <?php
-include_once 'header.php';
+include 'header.php';
 ?>
   <form action="includes/signup.inc.php" method="POST" class="row g-3">
     <div class="col-md-4">
       <label for="validationDefault01" class="form-label">First name</label>
-      <input type="text" name="firstname" class="form-control" id="validationDefault01" placeholder="First Name">
+      <input type="text" name="firstname" class="form-control" id="validationDefault01" placeholder="First Name" value="<?php if(isset($_POST['firstname'])){echo '$_POST["firstname"]';}?>">
     </div>
     <div class="col-md-4">
       <label for="validationDefault02" class="form-label">Last name</label>
@@ -38,7 +38,7 @@ include_once 'header.php';
       </div>
     </div>
     <div class="col-12">
-      <button class="btn btn-primary" name='submit' value="submit">Sign Up</button>
+      <button class="btn btn-primary" name='submit' type="submit">Sign Up</button>
     </div>
     <?php 
       if(isset($_GET['signup'])){

@@ -17,6 +17,9 @@ include 'includes/dbh.inc.php';
     </div>
     <?php
     if(isset($_GET['login'])){
+        if($_GET['login'] == 'succes'){
+            echo "<p class='text-control text-success'>You have succesfuly signed up! Please sign in!</p>";
+        }
         if($_GET['login'] == 'empty'){
             echo "<p class='text-control text-danger'>Fill in all fields</p>";
         }
