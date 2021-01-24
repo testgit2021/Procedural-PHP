@@ -18,6 +18,9 @@ if(isset($_POST['submit'])){
                 header("Location: ../login.php?login=passincorrect");
                 exit();
         }else{
+            $_SESSION["id"] = $row["Id"];
+            $_SESSION["firstname"] = $row["FirstName"];
+            $_SESSION["lastname"] = $row["LastName"];
             $_SESSION["user"] = $row["UserName"];
             header("Location: ../index.php?login=success");
             exit();
