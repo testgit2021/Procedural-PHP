@@ -16,11 +16,12 @@ session_start();
   <div class="container-lg">
   <?php
   if(isset($_SESSION["user"])){
-      echo '<a class="navbar-brand" href="index.php"><img src="images/logo_'.$_SESSION['user'].'.png" alt="site-logo"></a>';
+    if(file_exists("images/logo_".$_SESSION['user'].".jpg")){
+      echo '<a class="navbar-brand" href="index.php"><img src="images/logo_'.$_SESSION['user'].'.jpg"';
     }
     else{
-      echo '<a class="navbar-brand" href="index.php"><img src="images/perm_identity-24px.svg" alt="site-logo"></a>';
-    }?>
+      echo '<a class="navbar-brand" href="index.php"><img src="images/perm_identity-24px.svg" alt="site-logo" style=background:#fff;></a>';
+    }}?>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -69,7 +70,8 @@ session_start();
       <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        <?php 
+        
+      </form><?php 
             if(isset($_SESSION["user"])){
               echo "<span class='text-control text-danger p-1'>Wellcome, ". $_SESSION["user"] ."!</span>";
             }elseif(isset($_GET["logout"])){
@@ -77,7 +79,6 @@ session_start();
                 echo "<span class='text-control text-success p-1'>Logged out!</span>";
             }}
     ?>
-      </form>
     </div>
   </div>
 </nav>
