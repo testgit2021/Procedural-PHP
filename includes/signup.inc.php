@@ -31,7 +31,8 @@ if(isset($_POST['submit'])){
         $pwdHash = password_hash($pwd, PASSWORD_DEFAULT);
         $sql = "INSERT INTO users (FirstName, LastName, UserName, Email, UserPwd) VALUES ('$firstName', '$lastName', '$userName', '$email', '$pwdHash');";
         mysqli_query($conn, $sql);
-        header("Location: ../login.php?login=succes");
+        require_once 'login.inc.php';
+        header("Location: ../index.php?login=succes");
         exit();
     }
 }else{

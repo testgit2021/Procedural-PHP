@@ -16,12 +16,16 @@ session_start();
   <div class="container-lg">
   <?php
   if(isset($_SESSION["user"])){
-    if(file_exists("images/logo_".$_SESSION['user'].".jpg")){
-      echo '<a class="navbar-brand" href="index.php"><img src="images/logo_'.$_SESSION['user'].'.jpg"';
+    $user = $_SESSION["user"];
+    $file = 'images/logo_'.$user.'.jpg';
+    if(file_exists($file)){
+      echo '<a class="navbar-brand" href="index.php"><img src="images/logo_' .$user.'.jpg" width=32 height=32></a>';
     }
     else{
       echo '<a class="navbar-brand" href="index.php"><img src="images/perm_identity-24px.svg" alt="site-logo" style=background:#fff;></a>';
-    }}?>
+    }}else{
+      echo '<a class="navbar-brand" href="index.php"><img src="images/perm_identity-24px.svg" alt="site-logo" style=background:#fff;></a>';
+    }?>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

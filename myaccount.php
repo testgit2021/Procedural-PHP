@@ -31,16 +31,15 @@ include_once 'header.php';?>
     <button class="btn btn-primary" name="delete" type="submit">Delete</button>
   </div>
 <?php
-  if(isset($_GET['deleteerror'])){
-      echo '<p class="text-danger">Delete error!</p>';
-  }elseif(isset($_GET['deletesuccess'])){
-      echo '<p class="text-success">You have successfully deleted the file!</p>';
-  }elseif(isset($_GET['filedoesnotexist'])){ 
-    echo '<p class="text-danger">The file does not exist!</p>';
-  }elseif(isset($_GET['usedeletebutton'])){ 
-    echo '<p class="text-danger">Please use the delete button!</p>';
-  }
-?>
+if(isset($_SESSION['deletemesage'])){
+  foreach ($_SESSION['deletemesage'] as $key => $value) {
+    echo $value.'<br>';
+  }unset($_SESSION['deletemesage']);
+}
+if(isset($_GET['usedeletebutton'])){
+      echo '<p class="text-danger">Please use the delete button!</p>';
+    }
+  ?>
 </form>
 
 <?php

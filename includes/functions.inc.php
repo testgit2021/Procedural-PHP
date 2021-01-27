@@ -1,5 +1,4 @@
 <?php
-
 function emptyInput($firstName, $lastName, $userName, $email, $pwd){
     $result;
     if(empty($firstName) || empty($lastName) || empty($userName) || empty($email) || empty($pwd)){
